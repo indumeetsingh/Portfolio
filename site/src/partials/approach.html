@@ -1,0 +1,14 @@
+<!-- Approach: numbered steps -->
+<section class="w sec2" id="sx-approach">
+  <p class="m lab">{{approach.kicker}}</p>
+  <h2 class="d mb">{{approach.title}}</h2>
+  <ol>
+    {{#each approach.steps}}
+    <li>
+      <p class="m mu">{{label}}</p>
+      <h3 class="d">{{title}}</h3>
+      <p class="mu">{{desc}}</p>
+    </li>
+    {{/each}}
+  </ol>
+</section>

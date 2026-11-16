@@ -1,0 +1,24 @@
+/* Layout + typography utilities + buttons */
+
+/* Text variants from content.json: .t-l = full copy, .t-s = short copy (phones, see 99-responsive.css).
+   .m-hide hides an element on phones. */
+.sx .t-s { display: none; }
+
+.sx .w { max-width: 1200px; margin: 0 auto; padding-left: 32px; padding-right: 32px; }  /* wrapper */
+.sx .d { font-family: 'Inter Tight', Inter, sans-serif; font-weight: 600; letter-spacing: -.025em; }  /* display font */
+.sx .m { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; }  /* mono labels */
+.sx .mu { color: var(--mute); }  /* muted text */
+
+.sx .pill { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border-radius: 999px; font-weight: 500; }
+.sx .dark { background: var(--ink); color: #fff !important; }
+
+.sx .btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+  min-height: 52px; padding: 0 26px; border-radius: 999px;
+  font-weight: 500; font-size: 16px;
+  transition: background .2s, border-color .2s;
+}
+.sx .pri { background: var(--acc); color: #fff !important; }
+.sx .pri:hover { background: #1D4ED8; }
+.sx .sec { border: 1px solid var(--line2) !important; color: var(--ink); }
+.sx .sec:hover { border-color: var(--ink) !important; }

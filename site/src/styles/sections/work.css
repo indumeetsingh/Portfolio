@@ -1,0 +1,8 @@
+/* Selected work: case rows */
+.sx .case { display: grid; grid-template-columns: 260px 1fr; gap: 16px 48px; padding: 40px 0; border-top: 1px solid var(--line); }
+.sx .case:last-child { border-bottom: 1px solid var(--line); }
+.sx .case h3 { font-size: 26px; line-height: 1.25; }
+.sx .case .who { margin-top: 6px; font-weight: 500; }
+.sx .case .sm { font-size: 15px; }
+.sx .case p.t { margin-bottom: 18px; }
+.sx .case .tags { color: var(--soft); }

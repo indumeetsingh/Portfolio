@@ -1,0 +1,4 @@
+/* Reset: neutralise Carrd's defaults inside our container */
+.sx * { box-sizing: border-box; }
+.sx h1, .sx h2, .sx h3, .sx p, .sx ol, .sx ul { margin: 0; padding: 0; }
+.sx a { color: inherit; text-decoration: none; border: 0; }

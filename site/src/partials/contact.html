@@ -1,0 +1,15 @@
+<!-- Contact -->
+<section class="w ct" id="sx-contact">
+  <p class="m lab">{{contact.kicker}}</p>
+  <h2 class="d">{{contact.title}}</h2>
+  <p class="lead mu">{{contact.lead}}</p>
+  <div class="row" style="gap:14px 28px">
+    <a class="btn pri" href="{{calendlyUrl}}" target="_blank" rel="noopener">{{contact.cta}} {{> icons/arrow}}</a>
+    <a class="mail" href="mailto:{{email}}">{{email}}</a>
+  </div>
+  <div class="soc">
+    {{#each contact.socials}}
+    <a href="{{url}}" target="_blank" rel="noopener">{{label}}</a>
+    {{/each}}
+  </div>
+</section>

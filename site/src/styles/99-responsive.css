@@ -1,0 +1,86 @@
+/* ==========================================================================
+   Responsive overrides
+   Kept in ONE file loaded LAST on purpose: these rules rely on coming after
+   the base rules in the cascade. Grouped by section with comments.
+   ========================================================================== */
+
+/* Tablet */
+@media (max-width:980px) {
+  .sx ol { grid-template-columns: 1fr 1fr; }
+  .sx .about { grid-template-columns: 260px 1fr; }
+}
+
+/* Mobile */
+@media (max-width:720px) {
+  /* base: short copy + hidden extras */
+  .sx { font-size: 16px; line-height: 1.55; }
+  .sx .t-l { display: none !important; }
+  .sx .t-s { display: block; }
+  .sx .w { padding-left: 20px; padding-right: 20px; }
+  .sx .mu { color: #3F4B5C; }
+
+  /* header */
+  .sx .hd .w { padding-top: 14px; padding-bottom: 14px; }
+  .sx nav a.l { display: none; }
+  .sx .pill { min-height: 40px; padding: 0 16px; font-size: 14px; }
+
+  /* hero */
+  .sx .hero { padding-top: 48px; padding-bottom: 48px; }
+  .sx .eye, .sx .lab, .sx .kick { font-family: Inter, system-ui, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+  .sx .eye { margin-bottom: 16px; color: var(--mute); }
+  .sx h1 { font-size: 38px; line-height: 1.08; letter-spacing: -.03em; }
+  .sx .lead { margin-top: 18px; font-size: 17px; line-height: 1.55; }
+  .sx .row { flex-direction: column; align-items: stretch; gap: 10px; margin-top: 28px; }
+  .sx .btn { width: 100%; min-height: 50px; }
+
+  /* platforms */
+  .sx .strip .w { padding-top: 20px; padding-bottom: 20px; gap: 10px; }
+  .sx .strip .m { width: 100%; font-family: Inter, system-ui, sans-serif; font-weight: 600; letter-spacing: .08em; }
+  .sx .strip b { display: inline-block; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; font-family: Inter, system-ui, sans-serif; font-size: 14px; line-height: 1.3; }
+
+  /* generic section */
+  .sx .sec2 { padding-top: 56px; padding-bottom: 8px; }
+  .sx .lab { margin-bottom: 8px; }
+  .sx h2 { font-size: 28px; line-height: 1.15; }
+  .sx .top { margin-bottom: 20px; }
+  .sx .mb { margin-bottom: 20px; }
+
+  /* services */
+  .sx .grid { grid-template-columns: 1fr; }
+  .sx .cell, .sx .cell:nth-child(2n) { padding: 18px 0; border-left: 0; }
+  .sx h3 { font-size: 18px; margin-bottom: 4px; letter-spacing: -.01em; }
+  .sx .cell p.mu { font-size: 15px; }
+
+  /* work */
+  .sx .case { grid-template-columns: 1fr; gap: 0; padding: 22px 0; }
+  .sx .case > div:first-child { display: none; }
+  .sx .case .kick { color: var(--acc); margin-bottom: 6px; }
+  .sx .case h3 { font-size: 19px; line-height: 1.3; margin-bottom: 6px; }
+  .sx .case p.t { font-size: 15px; margin-bottom: 12px; }
+  .sx .case .tags { display: none; }
+
+  /* approach */
+  .sx ol { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .sx ol li { border: 1px solid var(--line); border-radius: 12px; padding: 16px; }
+  .sx ol .m { border: 0 !important; padding: 0; margin: 0 0 8px; font-family: Inter, system-ui, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; color: var(--acc); }
+  .sx ol h3 { font-size: 17px; margin-bottom: 4px; }
+  .sx ol p.mu { font-size: 14px; line-height: 1.45; }
+
+  /* about */
+  .sx .about { grid-template-columns: 1fr; gap: 20px; }
+  .sx .about img { width: 112px; height: 112px; border-radius: 999px; }
+  .sx .about h2 { margin-bottom: 12px; }
+  .sx .about p.mu { font-size: 16px; margin-bottom: 16px; }
+  .sx .chips.t-s { display: flex; margin-top: 4px; }
+
+  /* contact */
+  .sx .ct { padding-top: 64px; padding-bottom: 56px; }
+  .sx .ct h2 { font-size: 32px; line-height: 1.12; }
+  .sx .ct .lead { margin-top: 12px; font-size: 16px; }
+  .sx .ct .row { margin-top: 24px; }
+  .sx .mail { display: flex; align-items: center; justify-content: center; min-height: 50px; border: 1px solid var(--line2) !important; border-radius: 999px; padding: 0 20px; font-size: 15px; }
+  .sx .soc { justify-content: center; margin-top: 20px; gap: 20px; }
+
+  /* footer */
+  .sx .ft .w { flex-direction: column; align-items: center; text-align: center; gap: 4px; font-size: 13px; }
+}

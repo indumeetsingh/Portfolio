@@ -1,0 +1,8 @@
+/* Generic section: kicker label, headings, section header row */
+.sx .sec2 { padding-top: 112px; padding-bottom: 32px; }
+.sx .lab { color: var(--acc); margin-bottom: 14px; }
+.sx h2 { font-size: clamp(30px,3.6vw,44px); line-height: 1.12; }
+.sx .top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 24px; margin-bottom: 56px; }
+.sx .top p.mu { max-width: 420px; }
+.sx h3 { font-size: 22px; letter-spacing: -.01em; margin-bottom: 12px; }
+.sx .mb { margin-bottom: 56px; }

@@ -1,0 +1,18 @@
+<!-- Services: 2x2 grid of cells -->
+<section class="w sec2" id="sx-services">
+  <div class="top">
+    <div>
+      <p class="m lab">{{services.kicker}}</p>
+      <h2 class="d">{{services.title}}</h2>
+    </div>
+    <p class="mu t-l">{{services.intro}}</p>
+  </div>
+  <div class="grid">
+    {{#each services.items}}
+    <div class="cell">
+      <h3 class="d">{{title}}</h3>
+      <p class="mu">{{desc}}</p>
+    </div>
+    {{/each}}
+  </div>
+</section>

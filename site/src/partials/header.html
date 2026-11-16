@@ -1,0 +1,12 @@
+<!-- Header: logo, in-page nav (data-to, not href="#id": Carrd hijacks hash links), booking pill -->
+<header class="hd">
+  <div class="w">
+    <a class="logo" href="#" data-to="sx-top">{{brand}}</a>
+    <nav aria-label="Main">
+      {{#each nav}}
+      <a class="l" href="#" data-to="{{to}}">{{label}}</a>
+      {{/each}}
+      <a class="pill dark" href="{{calendlyUrl}}" target="_blank" rel="noopener">{{navCta}}</a>
+    </nav>
+  </div>
+</header>

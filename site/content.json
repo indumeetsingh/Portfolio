@@ -1,0 +1,166 @@
+{
+  "_help": [
+    "ALL the words on the page live here. Links, names and the year are in site.config.json.",
+    "Any text can be a plain string or {\"full\": \"...\", \"short\": \"...\"}: phones (720px and under) show the short one.",
+    "{{brand}}, {{year}}, {{founderName}}, {{legalName}} and any other key from site.config.json can be used inside a text.",
+    "Lists are arrays: add, remove or reorder entries and the page follows."
+  ],
+  "nav": [
+    { "label": "Work", "to": "sx-work" },
+    { "label": "Services", "to": "sx-services" },
+    { "label": "Approach", "to": "sx-approach" },
+    { "label": "About", "to": "sx-about" }
+  ],
+  "navCta": "Book a call",
+  "hero": {
+    "eyebrow": {
+      "full": "{{founderName}} · Solution Architect & Lead Developer · Montreal",
+      "short": "Solution Architect · Montreal"
+    },
+    "title": "I design and build the systems behind",
+    "titleAccent": "modern commerce.",
+    "lead": {
+      "full": "Solution architect and lead developer with 8+ years shipping enterprise platforms on .NET, Azure, Shopify Plus and Dynamics 365 Commerce. I help growing businesses get the architecture right, then build it to last.",
+      "short": "I’m Indumeet, a solution architect and lead developer with 8+ years building enterprise commerce and cloud platforms."
+    },
+    "cta": "Book a discovery call",
+    "cta2": "See selected work"
+  },
+  "platforms": {
+    "title": "Platforms I architect on",
+    "items": ["Microsoft Azure", ".NET", "Shopify Plus", "Dynamics 365 Commerce", "Optimizely"]
+  },
+  "services": {
+    "kicker": "01 — Services",
+    "title": "From architecture to production.",
+    "intro": "One partner who can design the system, write the code and keep it running, so nothing gets lost between the diagram and the deploy.",
+    "items": [
+      {
+        "title": "Solution architecture",
+        "desc": {
+          "full": "System design, integration patterns and architecture reviews. Event-driven, serverless and microservice designs that fit your scale and your team.",
+          "short": "System design, integration patterns and architecture reviews."
+        }
+      },
+      {
+        "title": "Commerce platforms",
+        "desc": {
+          "full": "Shopify Plus, Dynamics 365 Commerce and Optimizely: custom functionality, multi-site setups, storefront performance and accessibility.",
+          "short": "Shopify Plus, D365 Commerce and Optimizely builds."
+        }
+      },
+      {
+        "title": "Cloud & integrations",
+        "desc": {
+          "full": "Azure Functions, Service Bus and secure REST APIs with OAuth, OIDC and SAML, connecting commerce, ERP, payments and marketing systems.",
+          "short": "Secure Azure integrations between commerce, ERP and payments."
+        }
+      },
+      {
+        "title": "Delivery & DevOps",
+        "desc": {
+          "full": "CI/CD on Azure DevOps and GitHub, release automation, monitoring with Application Insights and hands-on production support.",
+          "short": "CI/CD, monitoring and production support."
+        }
+      }
+    ]
+  },
+  "work": {
+    "kicker": "02 — Selected work",
+    "title": "Platforms built for real-world load.",
+    "items": [
+      {
+        "period": "2026 — Present",
+        "who": "Reitmans Canada",
+        "role": "Retail · Senior Developer",
+        "kick": "Reitmans Canada · 2026–Present",
+        "title": "Event-driven integrations for high-volume Shopify Plus",
+        "desc": {
+          "full": "Designing serverless integrations between Shopify Plus and internal systems on Azure Functions and Service Bus to process high-volume transactional data, with secure API workflows and multi-site support.",
+          "short": "Serverless Shopify Plus integrations on Azure for high-volume retail."
+        },
+        "tags": "Shopify Plus · Azure Functions · Service Bus · TypeScript"
+      },
+      {
+        "period": "2023 — 2026",
+        "who": "Joseph Ribkoff",
+        "role": "Global fashion retail · Full-Stack Developer",
+        "kick": "Joseph Ribkoff · 2023–2026",
+        "title": "Enterprise commerce across global digital channels",
+        "desc": {
+          "full": "Led development on .NET, Dynamics 365 Commerce and Optimizely, built a reusable UI component library for brand consistency, and moved releases onto automated Azure DevOps pipelines.",
+          "short": ".NET, D365 Commerce and Optimizely for a global fashion brand."
+        },
+        "tags": ".NET · D365 Commerce · Optimizely · Azure DevOps"
+      },
+      {
+        "period": "2021 — 2023",
+        "who": "Byte Digital",
+        "role": "Multi-client agency · Software Developer",
+        "kick": "Byte Digital · 2021–2023",
+        "title": "Cloud modernization for retail and logistics clients",
+        "desc": {
+          "full": "Led projects end to end, from architecture to production support: REST APIs, Azure deployments and CI/CD that cut manual release work across several client platforms.",
+          "short": "End-to-end Azure and API projects for multiple clients."
+        },
+        "tags": "C# · SQL Server · Azure · REST APIs"
+      },
+      {
+        "period": "2020 — 2021",
+        "who": "Dulcedo Management",
+        "role": "Talent agency · Web Developer",
+        "kick": "Dulcedo Management · 2020–2021",
+        "title": "An office platform that replaced manual operations",
+        "desc": {
+          "full": "Defined the processes, roles and permissions with stakeholders, then built a custom platform for recruitment, talent management, contracts and administration.",
+          "short": "A custom platform that replaced manual agency workflows."
+        },
+        "tags": "Laravel · React · REST APIs"
+      }
+    ]
+  },
+  "approach": {
+    "kicker": "03 — Approach",
+    "title": "How an engagement works.",
+    "steps": [
+      { "label": "Step 1", "title": "Discover", "desc": { "full": "Understand your goals, constraints and the systems you already run.", "short": "Goals, constraints and current systems." } },
+      { "label": "Step 2", "title": "Architect", "desc": { "full": "A clear target architecture, integration plan and delivery roadmap.", "short": "Target architecture and roadmap." } },
+      { "label": "Step 3", "title": "Build", "desc": { "full": "Hands-on development with CI/CD from day one and regular demos.", "short": "Hands-on delivery with CI/CD." } },
+      { "label": "Step 4", "title": "Run", "desc": { "full": "Monitoring, optimization and support so the system keeps performing.", "short": "Monitoring and ongoing support." } }
+    ]
+  },
+  "about": {
+    "kicker": "04 — About",
+    "portraitAlt": "Portrait of {{founderName}}",
+    "title": "Architect by role. Engineer by habit.",
+    "text": {
+      "full": "I’m Indumeet, founder of STACKISM. For more than eight years I’ve designed and delivered enterprise systems in Canada and India, owning architecture decisions, leading technical initiatives and mentoring developers along the way.",
+      "short": "Founder of STACKISM. 8+ years designing and delivering enterprise systems in Canada and India. I work directly with stakeholders, and I still write the code."
+    },
+    "text2": "I work directly with business stakeholders, and I still write the code. That combination means designs that are practical to build and systems that hold up in production.",
+    "kit": [
+      { "label": "Architecture", "value": "Event-driven, microservices, distributed systems" },
+      { "label": "Backend", "value": "C#, ASP.NET Core, Web API, Entity Framework" },
+      { "label": "Cloud & DevOps", "value": "Azure, Azure DevOps, GitHub, Application Insights" },
+      { "label": "Frontend", "value": "TypeScript, React, Angular, SCSS" },
+      { "label": "Data", "value": "SQL Server, MongoDB, MySQL" },
+      { "label": "AI-assisted delivery", "value": "Claude Code, GitHub Copilot, Cursor, Azure AI Foundry" }
+    ],
+    "chips": [".NET / C#", "Azure", "Shopify Plus", "D365 Commerce", "Optimizely", "Event-driven", "TypeScript", "React", "SQL Server", "CI/CD", "Claude Code"]
+  },
+  "contact": {
+    "kicker": "05 — Contact",
+    "title": "Have a system to design or a platform to scale?",
+    "lead": "Tell me what you’re building and I’ll get back to you.",
+    "cta": "Book a discovery call",
+    "socials": [
+      { "label": "LinkedIn ↗", "url": "{{linkedinUrl}}" },
+      { "label": "GitHub ↗", "url": "{{githubUrl}}" },
+      { "label": "Résumé ↗", "url": "{{resumeUrl}}" }
+    ]
+  },
+  "footer": {
+    "legal": "© {{year}} {{brand}}, a brand of {{legalName}}",
+    "location": "{{location}}"
+  }
+}

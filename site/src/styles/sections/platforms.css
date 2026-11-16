@@ -1,0 +1,5 @@
+/* Platforms strip */
+.sx .strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+.sx .strip .w { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 44px; padding-top: 28px; padding-bottom: 28px; }
+.sx .strip .m { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
+.sx .strip b { font-family: 'Inter Tight', Inter, sans-serif; font-weight: 500; font-size: 18px; color: var(--soft); }

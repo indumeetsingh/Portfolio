@@ -1,0 +1,21 @@
+<!--
+  Page layout: the order of sections on the page.
+  Words come from content.json, links from site.config.json; partials hold the structure.
+  {{> path}}                   includes src/<path>.html
+  {{key}} / {{a.b}}            inserts text
+  {{#each list}}...{{/each}}   repeats for each item of a list
+  NOTE: keep inline text + inline tags (span, b, svg icon) on ONE line;
+  the build joins lines without a space when a line starts/ends with a tag.
+  The header must stay a direct child of .sx so it can stick for the whole page.
+-->
+<div class="sx" id="sx-top">
+  {{> partials/header}}
+  {{> partials/hero}}
+  {{> partials/platforms}}
+  {{> partials/services}}
+  {{> partials/work}}
+  {{> partials/approach}}
+  {{> partials/about}}
+  {{> partials/contact}}
+  {{> partials/footer}}
+</div>

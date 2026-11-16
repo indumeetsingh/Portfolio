@@ -1,0 +1,7 @@
+/* Hero */
+.sx .hero { padding-top: 120px; padding-bottom: 104px; }
+.sx .eye { margin-bottom: 28px; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
+.sx h1 { max-width: 980px; font-size: clamp(40px,6.4vw,84px); line-height: 1.04; letter-spacing: -.035em; }
+.sx .acc { color: var(--acc); }
+.sx .lead { margin-top: 36px; max-width: 640px; font-size: 20px; }
+.sx .row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 44px; align-items: center; }

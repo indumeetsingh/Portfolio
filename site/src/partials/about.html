@@ -1,0 +1,22 @@
+<!-- About: portrait (hosted in dist/assets), text, toolkit grid (desktop) / chips (phones) -->
+<section class="w sec2" id="sx-about">
+  <p class="m lab">{{about.kicker}}</p>
+  <div class="about">
+    <img src="{{assetBaseUrl}}/assets/portrait.jpg" alt="{{about.portraitAlt}}" width="400" height="400">
+    <div>
+      <h2 class="d">{{about.title}}</h2>
+      <p class="mu">{{about.text}}</p>
+      <p class="mu t-l">{{about.text2}}</p>
+      <div class="kit t-l">
+        {{#each about.kit}}
+        <div><p class="m mu">{{label}}</p><p>{{value}}</p></div>
+        {{/each}}
+      </div>
+      <div class="chips t-s">
+        {{#each about.chips}}
+        <span>{{.}}</span>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</section>

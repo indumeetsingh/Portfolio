@@ -1,0 +1,4 @@
+/* Services: 2-column cell grid with hairlines */
+.sx .grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
+.sx .cell { padding: 40px 40px 40px 0; border-bottom: 1px solid var(--line); }
+.sx .cell:nth-child(2n) { padding: 40px 0 40px 40px; border-left: 1px solid var(--line); }

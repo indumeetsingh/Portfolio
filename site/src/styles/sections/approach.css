@@ -1,0 +1,6 @@
+/* Approach: 4 numbered steps */
+.sx ol { list-style: none; display: grid; grid-template-columns: repeat(4,1fr); gap: 40px 32px; }
+.sx ol .m { padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--line2); }
+.sx ol li:first-child .m { border-bottom: 2px solid var(--acc); }
+.sx ol h3 { font-size: 20px; margin-bottom: 8px; }
+.sx ol p.mu { font-size: 16px; }

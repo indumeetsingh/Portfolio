@@ -1,0 +1,22 @@
+<!-- Selected work: one <article class="case"> per item. The left column is hidden on phones, where .kick shows instead -->
+<section class="w sec2" id="sx-work">
+  <p class="m lab">{{work.kicker}}</p>
+  <h2 class="d mb">{{work.title}}</h2>
+  <div>
+    {{#each work.items}}
+    <article class="case">
+      <div>
+        <p class="m mu">{{period}}</p>
+        <p class="who">{{who}}</p>
+        <p class="sm mu">{{role}}</p>
+      </div>
+      <div>
+        <p class="kick t-s">{{kick}}</p>
+        <h3 class="d">{{title}}</h3>
+        <p class="mu t">{{desc}}</p>
+        <p class="m tags">{{tags}}</p>
+      </div>
+    </article>
+    {{/each}}
+  </div>
+</section>

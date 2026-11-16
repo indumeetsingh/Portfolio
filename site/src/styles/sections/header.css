@@ -1,0 +1,7 @@
+/* Header / nav */
+.sx .hd { border-bottom: 1px solid var(--line); }
+.sx .hd .w { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 22px; padding-bottom: 22px; }
+.sx .logo { font-family: 'Inter Tight', Inter, sans-serif; font-weight: 600; font-size: 18px; letter-spacing: .08em; }
+.sx nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 15px; }
+.sx nav a.l { color: var(--mute); }
+.sx nav a.l:hover { color: var(--acc); }
