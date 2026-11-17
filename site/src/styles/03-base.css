@@ -9,8 +9,9 @@
 .sx .m { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; }  /* mono labels */
 .sx .mu { color: var(--mute); }  /* muted text */
 
-.sx .pill { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border-radius: 999px; font-weight: 500; }
+.sx .pill { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; border-radius: 999px; font-weight: 500; transition: background .2s; }
 .sx .dark { background: var(--ink); color: #fff !important; }
+.sx .pill.dark:hover { background: var(--acc); }
 
 .sx .btn {
   display: inline-flex; align-items: center; justify-content: center; gap: 10px;
@@ -22,3 +23,8 @@
 .sx .pri:hover { background: #1D4ED8; }
 .sx .sec { border: 1px solid var(--line2) !important; color: var(--ink); }
 .sx .sec:hover { border-color: var(--ink) !important; }
+
+/* Chips (hero + about on phones) */
+.sx .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.sx .chips span { display: inline-block; padding: 6px 12px; border: 1px solid var(--line); border-radius: 999px; font-size: 14px; line-height: 1.3; color: var(--soft); background: #fff; transition: border-color .2s, color .2s; }
+.sx .chips span:hover { border-color: var(--acc); color: var(--acc); }

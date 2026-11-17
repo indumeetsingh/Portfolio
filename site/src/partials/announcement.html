@@ -1,0 +1,13 @@
+<!-- Announcement bar: dismissable (remembered per visitor), socials on the right -->
+<div class="ann" id="sx-ann">
+  <div class="w ann-in">
+    <a class="ann-msg" href="{{companyUrl}}" target="_blank" rel="noopener"><span class="ann-dot"></span><span class="ann-txt">{{announcement.text}} · </span>{{announcement.cta}} {{> icons/arrow}}</a>
+    <div class="ann-r">
+      <a href="{{linkedinUrl}}" target="_blank" rel="noopener" aria-label="LinkedIn">{{> icons/linkedin}}</a>
+      <a href="{{githubUrl}}" target="_blank" rel="noopener" aria-label="GitHub">{{> icons/github}}</a>
+      <a href="{{resumeUrl}}" target="_blank" rel="noopener" aria-label="Résumé (PDF)">{{> icons/file}}</a>
+      <a href="mailto:{{email}}" aria-label="Email">{{> icons/mail}}</a>
+      <button class="ann-x" type="button" aria-label="Dismiss">{{> icons/close}}</button>
+    </div>
+  </div>
+</div>

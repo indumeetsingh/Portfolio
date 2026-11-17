@@ -18,6 +18,7 @@ const CSS_FILES = [
   'styles/01-tokens.css',
   'styles/02-reset.css',
   'styles/03-base.css',
+  'styles/sections/announcement.css',
   'styles/sections/header.css',
   'styles/sections/hero.css',
   'styles/sections/platforms.css',
@@ -26,11 +27,13 @@ const CSS_FILES = [
   'styles/sections/work.css',
   'styles/sections/approach.css',
   'styles/sections/about.css',
+  'styles/sections/faq.css',
   'styles/sections/contact.css',
   'styles/sections/footer.css',
+  'styles/sections/motion.css',
   'styles/99-responsive.css',
 ];
-const JS_FILES = ['scripts/smooth-scroll.js'];
+const JS_FILES = ['scripts/header.js', 'scripts/smooth-scroll.js', 'scripts/motion.js'];
 
 // Every selector must be scoped under this class so nothing leaks into Carrd.
 const SCOPE = '.sx';

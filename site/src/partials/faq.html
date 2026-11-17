@@ -1,0 +1,13 @@
+<!-- FAQ: accordion built on <details>, so it works without JS -->
+<section class="w sec2" id="sx-faq">
+  <p class="m lab">{{faq.kicker}}</p>
+  <h2 class="d">{{faq.title}}</h2>
+  <div class="faq">
+    {{#each faq.items}}
+    <details>
+      <summary><h3 class="d">{{q}}</h3><span class="plus"></span></summary>
+      <p class="mu">{{a}}</p>
+    </details>
+    {{/each}}
+  </div>
+</section>

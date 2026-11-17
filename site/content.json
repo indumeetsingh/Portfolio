@@ -2,33 +2,44 @@
   "_help": [
     "ALL the words on the page live here. Links, names and the year are in site.config.json.",
     "Any text can be a plain string or {\"full\": \"...\", \"short\": \"...\"}: phones (720px and under) show the short one.",
-    "{{brand}}, {{year}}, {{founderName}}, {{legalName}} and any other key from site.config.json can be used inside a text.",
-    "Lists are arrays: add, remove or reorder entries and the page follows."
+    "{{brand}}, {{year}}, {{founderName}}, {{companyName}}, {{companyUrl}}, {{partnerName}}, {{partnerUrl}} and any other key from site.config.json can be used inside a text.",
+    "Lists are arrays: add, remove or reorder entries and the page follows. hero.rotating must have exactly 3 phrases (the CSS loop is tuned for 3)."
   ],
+  "announcement": {
+    "text": "Need a team, not just me?",
+    "cta": "See {{companyName}}"
+  },
   "nav": [
     { "label": "Work", "to": "sx-work" },
     { "label": "Services", "to": "sx-services" },
     { "label": "Approach", "to": "sx-approach" },
-    { "label": "About", "to": "sx-about" }
+    { "label": "About", "to": "sx-about" },
+    { "label": "FAQ", "to": "sx-faq" }
   ],
   "navCta": "Book a call",
   "hero": {
     "eyebrow": {
-      "full": "{{founderName}} · Solution Architect & Lead Developer · Montreal",
-      "short": "Solution Architect · Montreal"
+      "full": "Solution Architect & Software Consultant · {{location}}",
+      "short": "Solution Architect & Software Consultant"
     },
     "title": "I design and build the systems behind",
-    "titleAccent": "modern commerce.",
+    "rotating": ["modern commerce.", "high-volume retail.", "growing online stores."],
     "lead": {
-      "full": "Solution architect and lead developer with 8+ years shipping enterprise platforms on .NET, Azure, Shopify Plus and Dynamics 365 Commerce. I help growing businesses get the architecture right, then build it to last.",
-      "short": "I’m Indumeet, a solution architect and lead developer with 8+ years building enterprise commerce and cloud platforms."
+      "full": "Solution architect and software consultant with 8+ years shipping enterprise platforms on .NET, Azure, Shopify Plus, Dynamics 365 Commerce and Optimizely. I design commerce systems for businesses of every size, from a first online store to high-volume retail, then build them to last.",
+      "short": "I’m Indumeet, a solution architect and software consultant with 8+ years building commerce and cloud platforms, from first stores to enterprise retail."
     },
     "cta": "Book a discovery call",
-    "cta2": "See selected work"
+    "cta2": "See selected work",
+    "stats": [
+      { "value": 8, "suffix": "+", "label": { "full": "years of enterprise delivery", "short": "years" } },
+      { "value": 5, "suffix": "", "label": { "full": "commerce platforms", "short": "platforms" } },
+      { "value": 2, "suffix": "", "label": { "full": "countries delivered in", "short": "countries" } }
+    ],
+    "chips": ["Shopify Plus", "D365 Commerce", "Optimizely", "WooCommerce", "Wix", "Azure", ".NET"]
   },
   "platforms": {
     "title": "Platforms I architect on",
-    "items": ["Microsoft Azure", ".NET", "Shopify Plus", "Dynamics 365 Commerce", "Optimizely"]
+    "items": ["Microsoft Azure", ".NET", "Shopify Plus", "Dynamics 365 Commerce", "Optimizely", "WooCommerce", "Wix", "Azure DevOps", "GitHub"]
   },
   "services": {
     "kicker": "01 — Services",
@@ -45,8 +56,8 @@
       {
         "title": "Commerce platforms",
         "desc": {
-          "full": "Shopify Plus, Dynamics 365 Commerce and Optimizely: custom functionality, multi-site setups, storefront performance and accessibility.",
-          "short": "Shopify Plus, D365 Commerce and Optimizely builds."
+          "full": "Shopify Plus, Dynamics 365 Commerce and Optimizely for enterprise retail; Shopify, WooCommerce and Wix for growing stores. Custom functionality, multi-site setups, storefront performance and accessibility.",
+          "short": "Shopify Plus, D365 Commerce, Optimizely, WooCommerce and Wix builds."
         }
       },
       {
@@ -62,6 +73,13 @@
           "full": "CI/CD on Azure DevOps and GitHub, release automation, monitoring with Application Insights and hands-on production support.",
           "short": "CI/CD, monitoring and production support."
         }
+      },
+      {
+        "title": "AI-assisted delivery",
+        "desc": {
+          "full": "Claude Code, GitHub Copilot and Azure AI Foundry in the workflow, with reviews and guardrails so velocity doesn’t cost quality.",
+          "short": "Claude Code, Copilot and Azure AI Foundry, with reviews and guardrails."
+        }
       }
     ]
   },
@@ -71,9 +89,9 @@
     "items": [
       {
         "period": "2026 — Present",
-        "who": "Reitmans Canada",
+        "who": "A national Canadian retailer",
         "role": "Retail · Senior Developer",
-        "kick": "Reitmans Canada · 2026–Present",
+        "kick": "National retailer · 2026–Present",
         "title": "Event-driven integrations for high-volume Shopify Plus",
         "desc": {
           "full": "Designing serverless integrations between Shopify Plus and internal systems on Azure Functions and Service Bus to process high-volume transactional data, with secure API workflows and multi-site support.",
@@ -83,9 +101,9 @@
       },
       {
         "period": "2023 — 2026",
-        "who": "Joseph Ribkoff",
+        "who": "A global fashion brand",
         "role": "Global fashion retail · Full-Stack Developer",
-        "kick": "Joseph Ribkoff · 2023–2026",
+        "kick": "Global fashion brand · 2023–2026",
         "title": "Enterprise commerce across global digital channels",
         "desc": {
           "full": "Led development on .NET, Dynamics 365 Commerce and Optimizely, built a reusable UI component library for brand consistency, and moved releases onto automated Azure DevOps pipelines.",
@@ -95,9 +113,9 @@
       },
       {
         "period": "2021 — 2023",
-        "who": "Byte Digital",
-        "role": "Multi-client agency · Software Developer",
-        "kick": "Byte Digital · 2021–2023",
+        "who": "A multi-client digital agency",
+        "role": "Agency · Software Developer",
+        "kick": "Digital agency · 2021–2023",
         "title": "Cloud modernization for retail and logistics clients",
         "desc": {
           "full": "Led projects end to end, from architecture to production support: REST APIs, Azure deployments and CI/CD that cut manual release work across several client platforms.",
@@ -107,9 +125,9 @@
       },
       {
         "period": "2020 — 2021",
-        "who": "Dulcedo Management",
-        "role": "Talent agency · Web Developer",
-        "kick": "Dulcedo Management · 2020–2021",
+        "who": "A talent agency",
+        "role": "Talent management · Web Developer",
+        "kick": "Talent agency · 2020–2021",
         "title": "An office platform that replaced manual operations",
         "desc": {
           "full": "Defined the processes, roles and permissions with stakeholders, then built a custom platform for recruitment, talent management, contracts and administration.",
@@ -134,22 +152,35 @@
     "portraitAlt": "Portrait of {{founderName}}",
     "title": "Architect by role. Engineer by habit.",
     "text": {
-      "full": "I’m Indumeet, founder of STACKISM. For more than eight years I’ve designed and delivered enterprise systems in Canada and India, owning architecture decisions, leading technical initiatives and mentoring developers along the way.",
-      "short": "Founder of STACKISM. 8+ years designing and delivering enterprise systems in Canada and India. I work directly with stakeholders, and I still write the code."
+      "full": "I’m Indumeet, a solution architect and software consultant based in Canada, working remotely with clients anywhere. For more than eight years I’ve designed and delivered enterprise systems in Canada and India, owning architecture decisions, leading technical initiatives and mentoring developers along the way.",
+      "short": "Solution architect and software consultant, 8+ years designing and delivering enterprise systems in Canada and India. Founder of <a href=\"{{companyUrl}}\" target=\"_blank\" rel=\"noopener\">{{companyName}}</a>. I work directly with stakeholders, and I still write the code."
     },
-    "text2": "I work directly with business stakeholders, and I still write the code. That combination means designs that are practical to build and systems that hold up in production.",
+    "text2": "I founded <a href=\"{{companyUrl}}\" target=\"_blank\" rel=\"noopener\">{{companyName}}</a>, where a team of architects, developers and DevOps engineers takes businesses from zero to fully online, and I partner with <a href=\"{{partnerUrl}}\" target=\"_blank\" rel=\"noopener\">{{partnerName}}</a> for custom apps and games. I work directly with stakeholders, and I still write the code.",
     "kit": [
       { "label": "Architecture", "value": "Event-driven, microservices, distributed systems" },
       { "label": "Backend", "value": "C#, ASP.NET Core, Web API, Entity Framework" },
+      { "label": "Commerce", "value": "Shopify Plus, D365 Commerce, Optimizely, WooCommerce, Wix" },
       { "label": "Cloud & DevOps", "value": "Azure, Azure DevOps, GitHub, Application Insights" },
       { "label": "Frontend", "value": "TypeScript, React, Angular, SCSS" },
       { "label": "Data", "value": "SQL Server, MongoDB, MySQL" },
       { "label": "AI-assisted delivery", "value": "Claude Code, GitHub Copilot, Cursor, Azure AI Foundry" }
     ],
-    "chips": [".NET / C#", "Azure", "Shopify Plus", "D365 Commerce", "Optimizely", "Event-driven", "TypeScript", "React", "SQL Server", "CI/CD", "Claude Code"]
+    "chips": [".NET / C#", "Azure", "Shopify Plus", "D365 Commerce", "Optimizely", "WooCommerce", "Wix", "Event-driven", "TypeScript", "React", "SQL Server", "CI/CD", "Claude Code"]
+  },
+  "faq": {
+    "kicker": "05 — FAQ",
+    "title": "Common questions.",
+    "items": [
+      { "q": "What kind of engagements do you take on?", "a": "Architecture reviews and target designs, lead development on commerce and integration platforms, and fractional-architect roles alongside an existing team. Short or long, always remote-friendly." },
+      { "q": "Do you only work with large retailers?", "a": "No. Through {{companyName}} I also set up stores for new and growing businesses on Shopify, WooCommerce or Wix, and recommend the platform that fits your catalogue and budget." },
+      { "q": "Which platforms do you work with?", "a": "Shopify Plus, Dynamics 365 Commerce, Optimizely, WooCommerce and Wix on the commerce side; .NET and Azure for integrations and services." },
+      { "q": "Where are you based?", "a": "Canada, working remotely with clients anywhere, with regular video check-ins." },
+      { "q": "What if the project needs a team?", "a": "{{companyName}} and partner {{partnerName}} provide developers, DevOps and app/game development, with me as architect." },
+      { "q": "How do we start?", "a": "Book a discovery call. We go through goals, constraints and existing systems, then you get a written proposal with scope and price." }
+    ]
   },
   "contact": {
-    "kicker": "05 — Contact",
+    "kicker": "06 — Contact",
     "title": "Have a system to design or a platform to scale?",
     "lead": "Tell me what you’re building and I’ll get back to you.",
     "cta": "Book a discovery call",
@@ -160,7 +191,14 @@
     ]
   },
   "footer": {
-    "legal": "© {{year}} {{brand}}, a brand of {{legalName}}",
-    "location": "{{location}}"
+    "legal": "© {{year}} {{founderName}}",
+    "links": [
+      { "label": "{{companyName}}", "url": "{{companyUrl}}" },
+      { "label": "{{partnerName}}", "url": "{{partnerUrl}}" },
+      { "label": "LinkedIn", "url": "{{linkedinUrl}}" },
+      { "label": "GitHub", "url": "{{githubUrl}}" },
+      { "label": "Résumé", "url": "{{resumeUrl}}" }
+    ],
+    "backToTop": "Back to top ↑"
   }
 }

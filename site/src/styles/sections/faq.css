@@ -1,0 +1,14 @@
+/* FAQ accordion (<details>) */
+.sx .faq { border-top: 1px solid var(--line); margin-top: 40px; }
+.sx .faq details { border-bottom: 1px solid var(--line); }
+.sx .faq summary { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 22px 0; cursor: pointer; list-style: none; }
+.sx .faq summary::-webkit-details-marker { display: none; }
+.sx .faq h3 { font-size: 19px; margin: 0; }
+.sx .plus { width: 28px; height: 28px; border-radius: 999px; border: 1px solid var(--line2); position: relative; flex: none; transition: background .2s, border-color .2s; }
+.sx .plus::before, .sx .plus::after { content: ""; position: absolute; left: 50%; top: 50%; width: 12px; height: 2px; background: var(--ink); transform: translate(-50%,-50%); transition: transform .25s, background .2s; }
+.sx .plus::after { transform: translate(-50%,-50%) rotate(90deg); }
+.sx .faq summary:hover .plus { background: #EFF6FF; border-color: var(--acc); }
+.sx .faq details[open] .plus::after { transform: translate(-50%,-50%) rotate(0deg); }
+.sx .faq details[open] .plus { background: var(--acc); border-color: var(--acc); }
+.sx .faq details[open] .plus::before, .sx .faq details[open] .plus::after { background: #fff; }
+.sx .faq p.mu { font-size: 16px; max-width: 720px; padding-bottom: 22px; }

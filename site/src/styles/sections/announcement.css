@@ -1,0 +1,20 @@
+/* Announcement bar (dark strip above the header) */
+.sx .ann { background: var(--ink); color: #CBD5E1; font-size: 13px; }
+.sx .ann.is-hidden { display: none; }
+.sx .ann-in { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 40px; }
+.sx .ann-msg { display: inline-flex; align-items: center; gap: 8px; color: #fff; font-weight: 500; transition: color .2s; }
+.sx .ann-msg:hover { color: #93C5FD; }
+.sx .ann-msg svg { width: 14px; height: 14px; }
+.sx .ann-txt { color: #94A3B8; }
+.sx .ann-dot { width: 8px; height: 8px; border-radius: 999px; background: #22C55E; flex: none; animation: sx-pulse 2s infinite; }
+.sx .ann-r { display: flex; align-items: center; gap: 2px; }
+.sx .ann-r a, .sx .ann-x { width: 30px; height: 30px; border-radius: 999px; display: flex; align-items: center; justify-content: center; color: #94A3B8; background: none; border: 0; padding: 0; cursor: pointer; font: inherit; transition: color .2s, background .2s; }
+.sx .ann-r a:hover, .sx .ann-x:hover { color: #fff; background: #1E293B; }
+.sx .ann-r svg { width: 15px; height: 15px; }
+.sx .ann-x { margin-left: 6px; }
+
+@keyframes sx-pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34,197,94,.6); }
+  70% { box-shadow: 0 0 0 7px rgba(34,197,94,0); }
+  100% { box-shadow: 0 0 0 0 rgba(34,197,94,0); }
+}

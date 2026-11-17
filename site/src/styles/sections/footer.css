@@ -1,3 +1,9 @@
-/* Footer */
+/* Footer: wordmark + links, then legal line */
 .sx .ft { border-top: 1px solid var(--line); }
-.sx .ft .w { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding-top: 28px; padding-bottom: 28px; font-size: 14px; }
+.sx .ft-top { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 16px 32px; padding: 36px 0 24px; border-bottom: 1px solid var(--line); }
+.sx .ft-links { display: flex; flex-wrap: wrap; gap: 8px 24px; font-size: 15px; }
+.sx .ft-links a { color: var(--mute); transition: color .2s; }
+.sx .ft-links a:hover { color: var(--acc); }
+.sx .ft-bot { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; padding: 20px 0 28px; font-size: 14px; }
+.sx .ft-bot a { transition: color .2s; }
+.sx .ft-bot a:hover { color: var(--acc); }

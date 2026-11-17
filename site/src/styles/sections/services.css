@@ -2,3 +2,5 @@
 .sx .grid { display: grid; grid-template-columns: 1fr 1fr; border-top: 1px solid var(--line); }
 .sx .cell { padding: 40px 40px 40px 0; border-bottom: 1px solid var(--line); }
 .sx .cell:nth-child(2n) { padding: 40px 0 40px 40px; border-left: 1px solid var(--line); }
+.sx .cell:last-child:nth-child(odd) { grid-column: 1 / -1; padding-right: 0; }
+.sx .cell p.mu { max-width: 640px; }

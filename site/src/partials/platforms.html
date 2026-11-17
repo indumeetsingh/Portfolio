@@ -1,9 +1,14 @@
-<!-- Platforms strip -->
+<!-- Platforms marquee. The list is rendered twice so the CSS loop is seamless -->
 <section class="strip" aria-label="Platforms">
-  <div class="w">
-    <span class="m mu">{{platforms.title}}</span>
-    {{#each platforms.items}}
-    <b>{{.}}</b>
-    {{/each}}
+  <div class="w"><span class="m mu">{{platforms.title}}</span></div>
+  <div class="mq">
+    <div class="mq-t">
+      {{#each platforms.items}}
+      <b>{{.}}</b>
+      {{/each}}
+      {{#each platforms.items}}
+      <b>{{.}}</b>
+      {{/each}}
+    </div>
   </div>
 </section>

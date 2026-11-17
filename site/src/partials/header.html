@@ -1,12 +1,16 @@
-<!-- Header: logo, in-page nav (data-to, not href="#id": Carrd hijacks hash links), booking pill -->
-<header class="hd">
+<!-- Sticky header. header.js adds .is-stuck on scroll and .is-open for the mobile menu.
+     In-page links use data-to (not href="#id": Carrd hijacks hash links). -->
+<header class="hd" id="sx-header">
   <div class="w">
-    <a class="logo" href="#" data-to="sx-top">{{brand}}</a>
-    <nav aria-label="Main">
+    <a class="logo" href="#" data-to="sx-top"><span class="t-l">{{brand}}</span><span class="t-s">{{shortBrand}}</span></a>
+    <nav class="nav" id="sx-nav" aria-label="Main">
       {{#each nav}}
       <a class="l" href="#" data-to="{{to}}">{{label}}</a>
       {{/each}}
-      <a class="pill dark" href="{{calendlyUrl}}" target="_blank" rel="noopener">{{navCta}}</a>
     </nav>
+    <div class="hd-r">
+      <a class="pill dark" href="{{calendlyUrl}}" target="_blank" rel="noopener">{{navCta}}</a>
+      <button class="burger" type="button" aria-label="Menu" aria-expanded="false" aria-controls="sx-nav">{{> icons/menu}}{{> icons/close}}</button>
+    </div>
   </div>
 </header>

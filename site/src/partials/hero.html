@@ -1,10 +1,23 @@
-<!-- Hero -->
-<section class="w hero">
+<!-- Hero: rotating phrase in the H1 (first phrase repeated at the end so the loop is seamless),
+     lead, CTAs, count-up stats and platform chips (chips are hidden on phones) -->
+<section class="w hero" id="sx-hero">
   <p class="m mu eye">{{hero.eyebrow}}</p>
-  <h1 class="d">{{hero.title}} <span class="acc">{{hero.titleAccent}}</span></h1>
+  <h1 class="d">{{hero.title}} <span class="rot acc"><span class="rot-in">{{#each hero.rotating}}<span>{{.}}</span>{{/each}}<span>{{hero.rotating.0}}</span></span></span></h1>
   <p class="lead mu">{{hero.lead}}</p>
   <div class="row">
     <a class="btn pri" href="{{calendlyUrl}}" target="_blank" rel="noopener">{{hero.cta}} {{> icons/arrow}}</a>
     <a class="btn sec" href="#" data-to="sx-work">{{hero.cta2}}</a>
+  </div>
+  <div class="glance">
+    <div class="stats">
+      {{#each hero.stats}}
+      <div class="stat"><b class="d"><span data-count="{{value}}">{{value}}</span>{{suffix}}</b><span class="mu">{{label}}</span></div>
+      {{/each}}
+    </div>
+    <div class="chips m-hide">
+      {{#each hero.chips}}
+      <span>{{.}}</span>
+      {{/each}}
+    </div>
   </div>
 </section>

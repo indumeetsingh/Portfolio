@@ -1,7 +1,17 @@
-<!-- Footer -->
+<!-- Footer: wordmark, links, legal line -->
 <footer class="ft">
-  <div class="w mu">
-    <p>{{footer.legal}}</p>
-    <p>{{footer.location}}</p>
+  <div class="w">
+    <div class="ft-top">
+      <a class="logo" href="#" data-to="sx-top">{{brand}}</a>
+      <nav class="ft-links" aria-label="Footer">
+        {{#each footer.links}}
+        <a href="{{url}}" target="_blank" rel="noopener">{{label}}</a>
+        {{/each}}
+      </nav>
+    </div>
+    <div class="ft-bot mu">
+      <p>{{footer.legal}} · {{location}}</p>
+      <a href="#" data-to="sx-top">{{footer.backToTop}}</a>
+    </div>
   </div>
 </footer>

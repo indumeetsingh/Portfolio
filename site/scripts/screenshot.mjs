@@ -28,18 +28,24 @@ function wrapper(width, height, { scroll = 0, menu = false } = {}) {
   return `<!doctype html><html><head><meta charset="utf-8"><style>html,body{margin:0;background:#888}iframe{display:block;border:0;background:#fff;width:${width}px;height:${height}px;margin:0 auto}</style></head>
 <body><iframe id="f" src="/preview.html"></iframe><script>
 var f=document.getElementById('f');f.addEventListener('load',function(){var w=f.contentWindow,d=w.document;
-setTimeout(function(){${scroll ? `w.scrollTo(0,${scroll});` : ''}${menu ? `var b=d.querySelector('.burger');if(b)b.click();` : ''}},600);});
+// Headless screenshots run on a virtual clock that does not drive CSS animations or rAF, so for
+// deterministic shots: freeze animations/transitions (end state) and let count-ups finish instantly.
+var n=0;w.requestAnimationFrame=function(cb){return setTimeout(function(){cb(n+=2000)},0)};
+var st=d.createElement('style');st.textContent='.sx *,.sx{animation:none!important;transition:none!important}';d.head.appendChild(st);
+setTimeout(function(){${scroll ? `w.scrollTo(0,${scroll});` : ''}${menu ? `var b=d.querySelector('.burger');if(b)b.click();` : ''}
+// IntersectionObserver callbacks and the last count-up frame need real frames, so settle them by hand.
+setTimeout(function(){d.querySelectorAll('.rv').forEach(function(e){e.classList.add('in')});d.querySelectorAll('[data-count]').forEach(function(e){e.textContent=e.getAttribute('data-count')})},300);},600);});
 </script></body></html>`;
 }
 
 const SHOTS = [
   { name: 'desktop-1366-top', win: [1366, 900], frame: [1366, 900] },
   { name: 'desktop-1366-scrolled', win: [1366, 900], frame: [1366, 900], scroll: 1200 },
-  { name: 'desktop-1366-full', win: [1366, 4200], frame: [1366, 4200] },
+  { name: 'desktop-1366-full', win: [1366, 5600], frame: [1366, 5600] },
   { name: 'mobile-390-top', win: [430, 900], frame: [390, 844] },
   { name: 'mobile-390-scrolled', win: [430, 900], frame: [390, 844], scroll: 900 },
   { name: 'mobile-390-menu', win: [430, 900], frame: [390, 844], menu: true },
-  { name: 'mobile-390-full', win: [430, 4400], frame: [390, 4400] },
+  { name: 'mobile-390-full', win: [430, 5200], frame: [390, 5200] },
 ];
 
 build({ quiet: true });

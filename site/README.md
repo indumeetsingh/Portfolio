@@ -58,7 +58,9 @@ site/
 │   │   ├── sections/*.css    # one file per section
 │   │   └── 99-responsive.css # tablet + mobile overrides (must stay last)
 │   └── scripts/
-│       └── smooth-scroll.js  # data-to links
+│       ├── header.js         # sticky state, mobile menu, announcement dismiss
+│       ├── smooth-scroll.js  # data-to links, offset for the sticky header
+│       └── motion.js         # scroll reveals + count-up stats
 ├── scripts/
 │   ├── build.mjs             # src → dist
 │   ├── dev.mjs               # local server + live reload
@@ -78,7 +80,7 @@ site/
   add, remove or reorder entries and the page follows.
 - Type `&` as is. Inline HTML (`<b>`, `<a>`) is allowed. `{{brand}}`, `{{year}}`, `{{linkedinUrl}}`
   and any other key from `site.config.json` can be used inside a text.
-- Elements with class `m-hide` in a partial are hidden on phones to keep mobile short.
+- Elements with class `m-hide` in a partial (section intro, hero chips, About toolkit) are hidden on phones to keep mobile short.
 
 ### Template syntax (in `src/`)
 

@@ -1,7 +1,25 @@
-/* Header / nav */
-.sx .hd { border-bottom: 1px solid var(--line); }
-.sx .hd .w { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 22px; padding-bottom: 22px; }
-.sx .logo { font-family: 'Inter Tight', Inter, sans-serif; font-weight: 600; font-size: 18px; letter-spacing: .08em; }
-.sx nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 15px; }
-.sx nav a.l { color: var(--mute); }
-.sx nav a.l:hover { color: var(--acc); }
+/* Sticky header / nav
+   .is-stuck  added by header.js once the page has scrolled (compact + blur)
+   .is-open   mobile menu open
+   .is-fixed  fallback when position:sticky is defeated by a Carrd wrapper */
+.sx .hd { position: sticky; top: 0; z-index: 50; background: #fff; border-bottom: 1px solid var(--line); transition: background .25s, box-shadow .25s; }
+.sx .hd.is-stuck { background: rgba(255,255,255,.86); -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); box-shadow: 0 10px 30px rgba(11,18,32,.06); }
+.sx .hd.is-fixed { position: fixed; top: 0; }
+
+.sx .hd .w { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding-top: 22px; padding-bottom: 22px; transition: padding .25s; }
+.sx .is-stuck .w { padding-top: 12px; padding-bottom: 12px; }
+.sx .logo { font-family: 'Inter Tight', Inter, sans-serif; font-weight: 600; font-size: 18px; letter-spacing: .08em; white-space: nowrap; }
+
+.sx .nav { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 28px; font-size: 15px; }
+.sx .nav a.l { color: var(--mute); position: relative; padding: 4px 0; transition: color .2s; }
+.sx .nav a.l::after { content: ""; position: absolute; left: 0; right: 0; bottom: -2px; height: 2px; background: var(--acc); transform: scaleX(0); transform-origin: left; transition: transform .25s; }
+.sx .nav a.l:hover { color: var(--acc); }
+.sx .nav a.l:hover::after { transform: scaleX(1); }
+
+.sx .hd-r { display: flex; align-items: center; gap: 10px; }
+
+/* Hamburger (shown ≤980px, see 99-responsive.css) */
+.sx .burger { display: none; width: 44px; height: 44px; border-radius: 999px; border: 1px solid var(--line2); background: none; color: var(--ink); cursor: pointer; padding: 0; align-items: center; justify-content: center; }
+.sx .burger svg + svg { display: none; }
+.sx .is-open .burger svg:first-child { display: none; }
+.sx .is-open .burger svg + svg { display: block; }

@@ -1,7 +1,25 @@
 /* Hero */
-.sx .hero { padding-top: 120px; padding-bottom: 104px; }
+.sx .hero { padding-top: 120px; padding-bottom: 96px; }
 .sx .eye { margin-bottom: 28px; font-size: 13px; letter-spacing: .06em; text-transform: uppercase; }
 .sx h1 { max-width: 980px; font-size: clamp(40px,6.4vw,84px); line-height: 1.04; letter-spacing: -.035em; }
 .sx .acc { color: var(--acc); }
 .sx .lead { margin-top: 36px; max-width: 640px; font-size: 20px; }
 .sx .row { display: flex; flex-wrap: wrap; gap: 14px; margin-top: 44px; align-items: center; }
+
+/* Rotating phrase inside the H1 (CSS only; 3 items, last = first for a seamless loop) */
+.sx .rot { display: inline-block; vertical-align: top; height: 1.04em; overflow: hidden; text-align: left; }
+.sx .rot-in { display: block; animation: sx-rot 9s cubic-bezier(.65,0,.35,1) infinite; }
+.sx .rot-in span { display: block; height: 1.04em; line-height: 1.04; white-space: nowrap; }
+@keyframes sx-rot {
+  0%, 24% { transform: translateY(0); }
+  33%, 57% { transform: translateY(-25%); }
+  66%, 90% { transform: translateY(-50%); }
+  100% { transform: translateY(-75%); }
+}
+
+/* At a glance: count-up stats + platform chips */
+.sx .glance { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 32px; margin-top: 56px; padding-top: 28px; border-top: 1px solid var(--line); }
+.sx .stats { display: flex; flex-wrap: wrap; gap: 16px 40px; }
+.sx .stat b { display: block; font-size: 34px; line-height: 1; letter-spacing: -.03em; margin-bottom: 6px; }
+.sx .stat > span { display: block; font-size: 14px; line-height: 1.4; }
+.sx .glance .chips { max-width: 520px; justify-content: flex-end; }

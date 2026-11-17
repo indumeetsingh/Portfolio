@@ -1,0 +1,36 @@
+/* ==========================================================================
+   Motion. Reveals only apply when motion.js has added .js to the root, so
+   nothing is ever hidden if the script does not run. All of it is switched
+   off under prefers-reduced-motion.
+   ========================================================================== */
+
+/* Scroll reveal: motion.js adds .rv, then .in when the element enters the viewport */
+.sx.js .rv { opacity: 0; transform: translateY(20px); transition: opacity .6s ease, transform .6s ease; }
+.sx.js .rv.in { opacity: 1; transform: none; }
+
+/* Hero entrance */
+.sx.js .hero > * { animation: sx-up .7s cubic-bezier(.2,.7,.2,1) both; }
+.sx.js .hero > :nth-child(2) { animation-delay: .08s; }
+.sx.js .hero > :nth-child(3) { animation-delay: .16s; }
+.sx.js .hero > :nth-child(4) { animation-delay: .24s; }
+.sx.js .hero > :nth-child(5) { animation-delay: .34s; }
+@keyframes sx-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Hover states */
+.sx .btn { transition: background .2s, border-color .2s, transform .2s, box-shadow .2s; }
+.sx .btn.pri:hover { transform: translateY(-1px); box-shadow: 0 10px 24px rgba(37,99,235,.35); }
+.sx .cell h3, .sx .case h3, .sx ol h3 { transition: color .2s; }
+.sx .cell:hover h3, .sx .case:hover h3, .sx ol li:hover h3 { color: var(--acc); }
+.sx .case { transition: background .25s; }
+.sx .about img { transition: transform .4s ease; }
+.sx .about img:hover { transform: scale(1.02); }
+.sx .soc a, .sx .mail { transition: color .2s, border-color .2s; }
+
+@media (prefers-reduced-motion: reduce) {
+  .sx.js .rv { opacity: 1; transform: none; transition: none; }
+  .sx.js .hero > *, .sx .rot-in, .sx .mq-t, .sx .ann-dot { animation: none; }
+  .sx .btn.pri:hover, .sx .about img:hover { transform: none; }
+}

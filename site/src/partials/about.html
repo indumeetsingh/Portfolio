@@ -2,12 +2,12 @@
 <section class="w sec2" id="sx-about">
   <p class="m lab">{{about.kicker}}</p>
   <div class="about">
-    <img src="{{assetBaseUrl}}/assets/portrait.jpg" alt="{{about.portraitAlt}}" width="400" height="400">
+    <img src="{{assetBaseUrl}}/assets/portrait.jpg" alt="{{about.portraitAlt}}" width="400" height="400" loading="lazy">
     <div>
       <h2 class="d">{{about.title}}</h2>
       <p class="mu">{{about.text}}</p>
-      <p class="mu t-l">{{about.text2}}</p>
-      <div class="kit t-l">
+      <p class="mu m-hide">{{about.text2}}</p>
+      <div class="kit m-hide">
         {{#each about.kit}}
         <div><p class="m mu">{{label}}</p><p>{{value}}</p></div>
         {{/each}}

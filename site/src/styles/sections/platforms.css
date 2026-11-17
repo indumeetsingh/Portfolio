@@ -1,5 +1,11 @@
-/* Platforms strip */
-.sx .strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.sx .strip .w { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 44px; padding-top: 28px; padding-bottom: 28px; }
+/* Platforms marquee (pure CSS, pauses on hover) */
+.sx .strip { border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 26px 0 22px; }
 .sx .strip .m { font-size: 12px; letter-spacing: .06em; text-transform: uppercase; }
-.sx .strip b { font-family: 'Inter Tight', Inter, sans-serif; font-weight: 500; font-size: 18px; color: var(--soft); }
+.sx .mq { overflow: hidden; margin-top: 14px; -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent); }
+.sx .mq-t { display: flex; width: max-content; animation: sx-mq 40s linear infinite; }
+.sx .mq:hover .mq-t { animation-play-state: paused; }
+.sx .mq-t b { display: flex; align-items: center; white-space: nowrap; padding-right: 22px; font-family: 'Inter Tight', Inter, sans-serif; font-weight: 500; font-size: 18px; color: var(--soft); }
+.sx .mq-t b::after { content: ""; width: 5px; height: 5px; border-radius: 999px; background: var(--line2); margin-left: 22px; }
+@keyframes sx-mq {
+  to { transform: translateX(-50%); }
+}
